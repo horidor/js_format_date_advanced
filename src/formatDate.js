@@ -21,10 +21,8 @@ function formatDate(date, fromFormat, toFormat) {
   for (let i = 0; i < 3; i++) {
     switch (toFormat[i]) {
       case 'DD':
-        newDateArr.push(dateFromObject['DD']);
-        break;
       case 'MM':
-        newDateArr.push(dateFromObject['MM']);
+        newDateArr.push(dateFromObject[toFormat[i]]);
         break;
       case 'YYYY':
         if ('YYYY' in dateFromObject) {
